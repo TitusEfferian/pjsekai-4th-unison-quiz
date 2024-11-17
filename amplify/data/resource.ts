@@ -11,6 +11,10 @@ const schema = a.schema({
   Question: a.model({
     question: a.string(),
     s3: a.string(),
+  }).authorization(allow=>{
+    return [
+      allow.publicApiKey(),
+    ]
   })
 })
 
@@ -19,7 +23,10 @@ export type Schema = ClientSchema<typeof schema>;
 export const data = defineData({
   schema,
   authorizationModes: {
-    defaultAuthorizationMode: 'iam',
+    defaultAuthorizationMode: 'apiKey',
+    apiKeyAuthorizationMode: {
+      expiresInDays: 365
+    }
   },
 });
 
