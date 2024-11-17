@@ -9,8 +9,8 @@ and "delete" any "Todo" records.
 
 const schema = a.schema({
   Question: a.model({
-    question: a.string(),
-    s3: a.string(),
+    question: a.string().required(),
+    s3: a.string().required(),
   }).authorization(allow=>{
     return [
       allow.publicApiKey(),
