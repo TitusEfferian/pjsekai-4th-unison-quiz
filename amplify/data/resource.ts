@@ -28,6 +28,7 @@ export const data = defineData({
       expiresInDays: 365
     }
   },
+  name: 'PJSEKAI 4th Unison GRAPHQL API'
 });
 
 /*== STEP 2 ===============================================================
