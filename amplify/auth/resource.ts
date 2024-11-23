@@ -22,11 +22,5 @@ export const auth = defineAuth({
       logoutUrls: ["http://localhost:3000"],
       callbackUrls: ["http://localhost:3000"],
     },
-  },
-  userAttributes: {
-    "custom:is_from_discord": {
-      dataType: "Boolean",
-      mutable: true,
-    }
   }
 });
