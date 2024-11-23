@@ -5,7 +5,6 @@ import { defineAuth, secret } from "@aws-amplify/backend";
  * @see https://docs.amplify.aws/gen2/build-a-backend/auth
  */
 export const auth = defineAuth({
-  name: 'pjsekai-4th-unison',
   loginWith: {
     email: true,
     externalProviders: {
@@ -15,7 +14,8 @@ export const auth = defineAuth({
           clientId: secret("client_id"),
           clientSecret: secret("client_secret"),
           name: "auth0-unison",
-          scopes: ["openid", "profile", "email", "name"],
+          // what is the list available scopes here?
+          scopes: ["openid"],
         },
       ],
       logoutUrls: ["http://localhost:3000"],

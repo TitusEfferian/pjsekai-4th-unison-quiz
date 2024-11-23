@@ -1,5 +1,5 @@
 'use client'
-import { signInWithRedirect } from "aws-amplify/auth";
+import { signInWithRedirect, signOut } from "aws-amplify/auth";
 
 export default function Home() {
   return (
@@ -15,6 +15,11 @@ export default function Home() {
         }}
       >
         click
+      </button>
+      <button onClick={()=>{
+        signOut();
+      }}>
+        signout
       </button>
     </div>
   );
