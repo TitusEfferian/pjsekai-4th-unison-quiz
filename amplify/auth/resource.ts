@@ -5,6 +5,7 @@ import { defineAuth, secret } from "@aws-amplify/backend";
  * @see https://docs.amplify.aws/gen2/build-a-backend/auth
  */
 export const auth = defineAuth({
+  name: 'pjsekai-4th-unison',
   loginWith: {
     email: true,
     externalProviders: {

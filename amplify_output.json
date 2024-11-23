@@ -1,0 +1,128 @@
+{
+  "auth": {
+    "user_pool_id": "ap-southeast-1_7cmbIPmV1",
+    "aws_region": "ap-southeast-1",
+    "user_pool_client_id": "66lgi656espd3mdgobp3hpf363",
+    "identity_pool_id": "ap-southeast-1:ee9df538-739e-4f49-b6e4-515e9915ab97",
+    "mfa_methods": [],
+    "standard_required_attributes": ["email"],
+    "username_attributes": ["email"],
+    "user_verification_types": ["email"],
+    "mfa_configuration": "NONE",
+    "password_policy": {
+      "min_length": 8,
+      "require_lowercase": true,
+      "require_numbers": true,
+      "require_symbols": true,
+      "require_uppercase": true
+    },
+    "oauth": {
+      "identity_providers": [],
+      "redirect_sign_in_uri": ["http://localhost:3000"],
+      "redirect_sign_out_uri": ["http://localhost:3000"],
+      "response_type": "code",
+      "scopes": [
+        "phone",
+        "email",
+        "openid",
+        "profile",
+        "aws.cognito.signin.user.admin"
+      ],
+      "domain": "944497d2fda3e65b6137.auth.ap-southeast-1.amazoncognito.com"
+    },
+    "unauthenticated_identities_enabled": true
+  },
+  "data": {
+    "url": "https://rpxcsxr2wffp5m5fevdr4ju4uu.appsync-api.ap-southeast-1.amazonaws.com/graphql",
+    "aws_region": "ap-southeast-1",
+    "api_key": "da2-5bxa7dvjszf2dgh2ddu3k6lqgy",
+    "default_authorization_type": "API_KEY",
+    "authorization_types": ["AMAZON_COGNITO_USER_POOLS", "AWS_IAM"],
+    "model_introspection": {
+      "version": 1,
+      "models": {
+        "Question": {
+          "name": "Question",
+          "fields": {
+            "id": {
+              "name": "id",
+              "isArray": false,
+              "type": "ID",
+              "isRequired": true,
+              "attributes": []
+            },
+            "question": {
+              "name": "question",
+              "isArray": false,
+              "type": "String",
+              "isRequired": true,
+              "attributes": []
+            },
+            "s3": {
+              "name": "s3",
+              "isArray": false,
+              "type": "String",
+              "isRequired": true,
+              "attributes": []
+            },
+            "createdAt": {
+              "name": "createdAt",
+              "isArray": false,
+              "type": "AWSDateTime",
+              "isRequired": false,
+              "attributes": [],
+              "isReadOnly": true
+            },
+            "updatedAt": {
+              "name": "updatedAt",
+              "isArray": false,
+              "type": "AWSDateTime",
+              "isRequired": false,
+              "attributes": [],
+              "isReadOnly": true
+            }
+          },
+          "syncable": true,
+          "pluralName": "Questions",
+          "attributes": [
+            {
+              "type": "model",
+              "properties": {}
+            },
+            {
+              "type": "auth",
+              "properties": {
+                "rules": [
+                  {
+                    "allow": "public",
+                    "provider": "apiKey",
+                    "operations": ["create", "update", "delete", "read"]
+                  }
+                ]
+              }
+            }
+          ],
+          "primaryKeyInfo": {
+            "isCustomPrimaryKey": false,
+            "primaryKeyFieldName": "id",
+            "sortKeyFieldNames": []
+          }
+        }
+      },
+      "enums": {},
+      "nonModels": {}
+    }
+  },
+  "storage": {
+    "aws_region": "ap-southeast-1",
+    "bucket_name": "amplify-d1l21ab5biv1r9-ma-pjsekai4thunisonbucket00-oyw7c84bw7nh",
+    "buckets": [
+      {
+        "name": "PJSEKAi 4th unison",
+        "bucket_name": "amplify-d1l21ab5biv1r9-ma-pjsekai4thunisonbucket00-oyw7c84bw7nh",
+        "aws_region": "ap-southeast-1"
+      }
+    ]
+  },
+  "version": "1.1"
+}
