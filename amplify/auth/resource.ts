@@ -15,7 +15,7 @@ export const auth = defineAuth({
           clientSecret: secret("client_secret"),
           name: "auth0-unison",
           // what is the list available scopes here?
-          scopes: ["openid"],
+          scopes: ["openid", "email"],
         },
       ],
       logoutUrls: ["http://localhost:3000"],
