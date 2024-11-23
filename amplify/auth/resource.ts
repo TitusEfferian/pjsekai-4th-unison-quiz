@@ -8,6 +8,7 @@ export const auth = defineAuth({
   loginWith: {
     email: true,
     externalProviders: {
+
       oidc: [
         {
           issuerUrl: "https://testing-amplify.jp.auth0.com",
@@ -22,4 +23,10 @@ export const auth = defineAuth({
       callbackUrls: ["http://localhost:3000"],
     },
   },
+  userAttributes: {
+    "custom:is_from_discord": {
+      dataType: "Boolean",
+      mutable: true,
+    }
+  }
 });
