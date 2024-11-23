@@ -14,6 +14,7 @@ export const auth = defineAuth({
           clientId: secret("client_id"),
           clientSecret: secret("client_secret"),
           name: "auth0-unison",
+          scopes: ["openid", "profile", "email", "name"],
         },
       ],
       logoutUrls: ["http://localhost:3000"],
